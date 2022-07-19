@@ -61,7 +61,7 @@ contract RandomNumberGenerator is VRFConsumerBase {
     }
 
     /**
-     * Callback function used by VRF Coordinator
+     * Callback function used by Chainlink VRF
      */
     function fulfillRandomness(bytes32 requestId, uint256 randomness) internal override {
         ILottery(requester).numbersDrawn(
